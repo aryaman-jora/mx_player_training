@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <script>
+        //array with task list 5 task and create a remove function that removes the element from the index passed in argument
+
+        var to_do_list = {
+            arr: [],
+            pos: 0,
+
+            add_task: function (task) {
+                this.arr.push(task)
+            },
+            print_list : function(){
+                document.write(this.arr)
+            },
+            remove_task: function () {
+                this.arr.splice(this.pos, 1)
+                document.write(this.arr)
+            }
+
+        };
+
+        //add task to list
+        to_do_list.add_task("task1");
+        to_do_list.add_task("task2");
+        to_do_list.add_task("task3");
+        to_do_list.add_task("task4");
+        to_do_list.add_task("task5");
+        to_do_list.add_task("task6");
+        //print list 
+        document.write("original list : ");
+        to_do_list.print_list();
+        document.write("<br />");
+        //remove task from list
+        document.write("list after removing : ");
+        to_do_list.remove_task(to_do_list.pos = 2)
+    </script>
+</head>
+
+</html>
