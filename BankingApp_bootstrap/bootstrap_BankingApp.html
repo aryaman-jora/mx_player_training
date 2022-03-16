@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Banking Gateway UI Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="CssBankingApp.css">
+    
+    
+    <script>
+        function open_account(){
+            let initial_Amount = document.getElementById("Amount").value;
+            if(initial_Amount == ''){
+                alert("Your amount is empty ");
+            }
+            else if(initial_Amount<5000){
+                alert("min 5000 is needed to create an account")
+            }
+            else{
+            document.getElementById('total').innerText=initial_Amount;
+            document.getElementById("Amount").value="";
+            alert("account created")     
+            }
+            }
+    
+        function deposit(){
+            let total_balance = document.getElementById('total').innerText;
+            let deposit_Amount = document.getElementById("Amount").value;
+            let balance_after_deposit = parseInt(total_balance)+parseInt(deposit_Amount);    
+            if(deposit_Amount == ''){
+                alert("Your amount is empty");
+            } 
+            else{
+                document.getElementById('total').innerText=balance_after_deposit;
+                document.getElementById("Amount").value="";
+                alert("amount added successfully");
+            }
+            }
+        function withdraw(){
+            let total_balance = document.getElementById('total').innerText;
+            let withdraw_Amount = document.getElementById("Amount").value;
+            let balance_after_withraw = total_balance-withdraw_Amount;
+            if (withdraw_Amount=="") {
+                alert("amount empty");
+            }
+            else if(withdraw_Amount > total_balance){
+                alert("not sufficient balance");
+            }
+            else{
+                document.getElementById('total').innerText=balance_after_withraw;
+                document.getElementById('Amount').value="";
+                alert('withdraw success');
+            }
+        } 
+        function clear(){
+            let Amount = document.getElementById("Amount").value;
+            Amount.textContent = "";
+            alert("cancel");
+        }        
+    </script>
+</head>
+<body>
+    <div class="container mt-4 d-flex justify-content-center main">
+        <div class="card">
+            <div class="d-flex justify-content-between px-3 pt-4">
+                <span class="pay">Add Amount</span>
+                <div class="amount">
+                    <div class="inner">
+                        <span class="dollar">Rs</span>
+                        <span class="total" id="total">0</span>
+                    </div>
+                </div>
+            </div>
+            <div class="px-3 pt-3">
+                <input type="number" id="Amount" name="number" class="form-control inputtxt" placeholder="Enter the Amount">
+            </div>
+            <div class="d-flex justify-content-between px-1 pt-4">
+                 <div>
+                    <button type="button" class="btn open" onclick="withdraw()">Withdraw</button>
+                 </div>
+                 <div>
+                    <button type="button" class="btn open" onclick="deposit()">Deposit</button>
+                </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between px-3 py-4">
+                <div>
+                    <button type="button" onclick="clear()" class="btn cancel">Cancel</button>
+                </div>
+                <div>
+                    <button type="button" class="btn payment" onclick="open_account()">Open Account</button>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>
+
