@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:id="@+id/card1"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/rel"
+        android:layout_height="400dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:background="@drawable/wal3"
+            android:id="@+id/image1"
+            android:layout_height="300dp"/>
+        <ImageView
+            android:layout_width="100dp"
+            android:background="@drawable/wal3"
+            android:layout_below="@id/image1"
+            android:id="@+id/image2"
+            android:layout_height="100dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/t1"
+            android:layout_below="@id/image1"
+            android:layout_toRightOf="@id/image2"
+            android:text="spiderman"
+            android:textSize="28dp"
+            android:gravity="center"
+            android:textColor="#F44336"
+            android:layout_height="wrap_content"/>
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_below="@id/t1"
+            android:layout_toRightOf="@id/image2"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
