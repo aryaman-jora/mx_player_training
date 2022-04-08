@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--<Button
+        android:layout_width="200dp"
+        android:text="Android"
+        android:id="@+id/button1"
+        android:layout_marginLeft="20dp"
+        android:background="#00BCD4"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_width="200dp"
+        android:text="java"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/button1"
+        android:id="@+id/button2"
+        android:layout_marginTop="15dp"
+        android:background="#8BC34A"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_width="200dp"
+        android:text="C++"
+        android:layout_toRightOf="@id/button1"
+        android:layout_marginLeft="80dp"
+        android:id="@+id/button3"
+        android:background="#FFC107"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_width="200dp"
+        android:text="kotlin"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/button2"
+        android:layout_below="@id/button3"
+        android:layout_marginLeft="80dp"
+        android:id="@+id/button4"
+        android:background="#FF5722"
+        android:layout_height="wrap_content" />-->
+
+    <!--<ImageView
+        android:layout_width="match_parent"
+        android:background="@drawable/wal3"
+        android:id="@+id/image1"
+        android:layout_height="300dp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:background="@drawable/wal3"
+        android:id="@+id/image2"
+        android:layout_below="@id/image1"
+        android:layout_marginTop="20dp"
+        android:layout_height="300dp"/>
+-->
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/edit1"
+        android:hint="USERNAME"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/edit2"
+        android:layout_below="@id/edit1"
+        android:layout_marginTop="10dp"
+        android:hint="PASSWORD"
+        android:inputType="textPassword"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_width="200dp"
+        android:id="@+id/login"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/edit2"
+        android:text="Login"
+        android:background="#2196F3"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_below="@id/edit2"
+        android:layout_toRightOf="@id/login"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="Register"
+        android:background="#8BC34A"
+        android:id="@+id/register"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>
